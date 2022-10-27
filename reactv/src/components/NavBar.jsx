@@ -7,9 +7,13 @@ import Series from './Series'
 import Trends from './Trends'
 import Pricing from './Pricing'
 
+export const Container = React.createContext()
+
 function NavBar(){
 	const [toggle,setToggle] = useState(true);
+	const [inputVal,setInputVal] = useState("");
 	return(
+		<Container.Provider value={{toggle,inputVal}}>
 		<div>
 			<nav className={toggle ? "" : "navBarColor"}>
 				<div className="nav-options">
@@ -28,7 +32,7 @@ function NavBar(){
 					</NavLink>
 				</div>
 				<div className="input-group">
-				<input type="text" placeholder="Search" />
+				<input type="text" placeholder="Search" onChange={(e) => setInputVal(e.target.value)} />
 				<HiSearch fontSize={21} color="green" id="search" />
 				<div id="Color-switcher" onClick={() => setToggle(!toggle)}>
 					<div id={toggle ? "Color-switcher-mover" : "Color-switcher-moved"}></div>
@@ -42,6 +46,7 @@ function NavBar(){
 				<Route path='pricing' element={<Pricing/>} />
 			</Routes>
 		</div>
+		</Container.Provider>
 	)
 }
 
