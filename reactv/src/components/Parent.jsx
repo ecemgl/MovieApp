@@ -18,15 +18,13 @@ function Parent(props){
 		const data = await axios.get(Api)
 		const results = data.data.entries
 		console.log("result",results)
-
 		setNewArr(results)
-		console.log(moviesData)
-
 		setMoviesData(newArr)
 	}
 	useEffect(() => {
 		MovieCall()
-	},[])
+		console.log("Tekrar render edilip çalıştırılınca mı patlıyor")
+	},[newArr])
 	console.log(moviesData)
 
 	return(
