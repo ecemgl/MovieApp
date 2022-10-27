@@ -1,12 +1,12 @@
 import React from 'react'
 import Parent from './Parent';
 
-function Movies(){
+function Series(){
 	return(
 		<div>
-			<Parent name="movie" />
+			<Parent name="series" />
 		</div>
 	)
 }
 
-export default Movies;
+export default Series;
