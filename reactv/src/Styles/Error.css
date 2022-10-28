@@ -7,21 +7,29 @@ body{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	background-color:#252525 ;
+	height: 100vh;
 	
+}
+.error-container-secondary{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 .msg-group{
-	margin-top: 30%;
 	display: flex;
 	align-items: flex-end;
 	border: 1px solid #ee0000;
 	border-radius: 5px;
 	padding: 10px;
 	box-shadow: 2px 5px;
+	color: white;
 }
 
 .msg-group-secondary{
-	margin-top: 30%;
 	display: flex;
 	align-items: flex-end;
 	border: 1px solid #64dbdf;
@@ -34,9 +42,9 @@ body{
 .error-btn{
 	display: inline-block;
 	padding: 0.35em 1.2em;
-	border: 0.1em solid #FFFFFF;
+	border: 0.1em solid #252525;
 	margin: 1.8em 0.3em 0.3em 1.8em;
-	border-radius: 0.12em;
+	border-radius: 0.5em;
 	box-sizing: border-box;
 	text-decoration: none;
 	color: #FFFFFF;
@@ -55,7 +63,7 @@ body{
 	padding: 0.35em 1.2em;
 	border: 0.1em solid #FFFFFF;
 	margin: 1.8em 0.3em 0.3em 1.8em;
-	border-radius: 0.12em;
+	border-radius: 0.5em;
 	box-sizing: border-box;
 	text-decoration: none;
 	color: #FFFFFF;
