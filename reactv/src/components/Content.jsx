@@ -18,7 +18,7 @@ function Content(props){
 	const [newArr,setNewArr] = useFilter([], props.name)
 	const navigate = useNavigate()
 
-	const Api = "https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/samjfgkple.json"
+	const Api = "https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json"
 	const ContentCall = async () => {
 		await axios.get(Api).then(function (data) {
 			

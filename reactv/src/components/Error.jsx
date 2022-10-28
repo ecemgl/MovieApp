@@ -15,7 +15,7 @@ function Error(){
 		<div className="error-container">
 			<div className="error-elements">
 				<div className={toggle ? "msg-group" : "msg-group-secondary"}>
-					<h1>Oops - we've looked everywhere bu couldn't find this page...</h1>
+					<h1>Oops - we've looked everywhere but couldn't find this page...</h1>
 					<div className="link-group">
 					<button className={toggle ? "error-btn" : "error-btn-secondary"}>
 						<Link style={{textDecoration: 'none', color: 'black'}} to="/">Return the home page</Link>
