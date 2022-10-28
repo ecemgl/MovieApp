@@ -1,0 +1,12 @@
+.main-footer {
+	color: white;
+	background-color: #ee0000;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+  }
+
+.row{
+	display: inline-flex;
+	align-items: center;
+}
