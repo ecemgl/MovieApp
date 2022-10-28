@@ -5,7 +5,7 @@ body{
 
 .home-container{
 	display: block;
-	background-color: #0c1e25;
+	background-color: #252525;
 	height: 100vh;
 	justify-content: center;
 }
@@ -32,9 +32,9 @@ body{
 .home-btn{
 	display: inline-block;
 	padding: 0.35em 1.2em;
-	border: 0.1em solid #FFFFFF;
+	border: 0.1em solid #252525;
 	margin: 1.8em 0.3em 0.3em 1.8em;
-	border-radius: 0.12em;
+	border-radius: 0.5em;
 	box-sizing: border-box;
 	text-decoration: none;
 	color: #FFFFFF;
@@ -53,7 +53,7 @@ body{
 	padding: 0.35em 1.2em;
 	border: 0.1em solid #FFFFFF;
 	margin: 1.8em 0.3em 0.3em 1.8em;
-	border-radius: 0.12em;
+	border-radius: 0.5em;
 	box-sizing: border-box;
 	text-decoration: none;
 	color: #FFFFFF;

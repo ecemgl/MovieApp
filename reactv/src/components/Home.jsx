@@ -15,11 +15,11 @@ function Home(){
 			</div>
 			<div className="home-buttons">
 					<button className={toggle ? "home-btn" : "home-btn-secondary"}>
-						<Link style={{textDecoration: 'none', color: 'black', fontSize:'18px'}} to="/movies">Movies</Link>
+						<Link style={{textDecoration: 'none', color: 'white', fontSize:'22px'}} to="/movies">Movies</Link>
 						
 					</button>
 					<button className={toggle ? "home-btn" : "home-btn-secondary"}>
-						<Link style={{textDecoration: 'none', color: 'black', fontSize:'18px'}} to="/series">Series</Link>
+						<Link style={{textDecoration: 'none', color: 'white', fontSize:'22px'}} to="/series">Series</Link>
 						
 					</button>
 
