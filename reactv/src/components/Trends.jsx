@@ -1,5 +1,4 @@
 import React from 'react'
-import globalArr from '../index'
 
 
 function Trends(props){

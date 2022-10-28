@@ -1,19 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import {AiFillPlayCircle} from 'react-icons/ai'
-import NoImage from './noImage.png'
-import '../Styles/Movies.css'
+import NoImage from '../noImage.png'
+import '../Styles/Content.css'
 import {Container} from './NavBar'
 import useFilter from '../hooks/useFilter' 
 import ClipLoader from "react-spinners/ClipLoader";
-import Error from './Error'
 import {useNavigate} from 'react-router-dom';
 
 
 function Content(props){
 	const [loading, setLoading] = useState(false)
-	const {toggle,inputValue} = useContext(Container)
-	const input = inputValue
+	const {toggle} = useContext(Container)
 	const [contentData,setContentData] = useState([])
 	const [newArr,setNewArr] = useFilter([], props.name)
 	const navigate = useNavigate()

@@ -1,5 +1,4 @@
 import React ,{ useContext } from 'react'
-import {HiSearch} from 'react-icons/hi'
 import {Link} from 'react-router-dom'
 import '../Styles/Error.css'
 import {Container} from './NavBar'
