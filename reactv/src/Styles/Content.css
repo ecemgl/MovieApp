@@ -2,7 +2,7 @@ body{
 	overflow-x: hidden;
 }
 
-.movies-container{
+.contents-container{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -16,17 +16,17 @@ body{
 	height: 100vh;
 }
 
-.mainBgColor{
-	background-color: #0c1e25;
+.content{
+	background-color: #252525;
 	width: 100%;	
 }
 
-.secondaryBgColor{
+.secondary-content{
 	background-color: #fff;
 	width: 100%;
 }
 
-.movies-container img{
+.contents-container img{
 	width: 350px;
 	height: 550px;
 	margin: 25px 0px 4px 15px;
@@ -40,10 +40,6 @@ body{
 	font-size: 1rem;
 }
 
-#Nothing{
-	display: none;
-}
-
 .secondaryColor{
 	color: #ff206a;
 	width: 90%;
@@ -52,28 +48,17 @@ body{
 	font-size: 1rem;
 }
 
-.movies-container h3, .movies-container img{
+.contents-container h3, .contents-container img{
 	cursor: pointer;
 	transition: .7s;
 }
 
-.movies-container img:hover{
+.contents-container img:hover{
 	transform: scale(1.05);
 }
 
 #container{
 	position: relative;
-}
-
-#hide{
-	display: none;
-}
-
-#smaller-Text{
-	width: 100%;
-	font-size: 14px;
-	display: flex;
-	justify-content: center;
 }
 
 #playIcon{
@@ -83,20 +68,10 @@ body{
 	visibility: visible;
 }
 
-#Exit1{
-	position: absolute;
-	margin-left: 475px;
-	margin-top: 67px;
-	z-index: 999;
-}
-
-.DarkTheme{
+.titleColor{
 	color: #fff;
 }
 
-#NoContainer{
-	opacity: 0.35;
-}
 
 
 

@@ -43,12 +43,12 @@ function Content(props){
 
 	return(
 		<div>
-			<div className={toggle ? "mainBgColor" : "secondaryBgColor"}>
-			<div className="movies-container">
+			<div className={toggle ? "content" : "secondaryContent"}>
+			<div className="contents-container">
 			{(loading || contentData.length === 0) ? 
 			<div className="loading-icon">
 				<ClipLoader
-				color={toggle ? "#EE9800" : "#ff206a"}
+				color={toggle ? "#ee0000" : "#64dbdf"}
 				loading={loading}
 				size={100}
 				aria-label="Loading Spinner"
@@ -62,7 +62,7 @@ function Content(props){
 					<div id="container">
 						<AiFillPlayCircle color="white" fontSize={40} id="playIcon" />
 						<img src={content.images["Poster Art"].url ? content.images["Poster Art"].url : NoImage} />
-						<h3 className={toggle ? "DarkTheme" : "LightThemeClose"}>{content.title}</h3>
+						<h3 className={toggle ? "titleColor" : ""}>{content.title}</h3>
 
 					</div>
 				</div>

@@ -14,7 +14,7 @@ body{
 	margin-top: 30%;
 	display: flex;
 	align-items: flex-end;
-	border: 1px solid #EE9800;
+	border: 1px solid #ee0000;
 	border-radius: 5px;
 	padding: 10px;
 	box-shadow: 2px 5px;
@@ -24,7 +24,7 @@ body{
 	margin-top: 30%;
 	display: flex;
 	align-items: flex-end;
-	border: 1px solid #ff206a;
+	border: 1px solid #64dbdf;
 	border-radius: 5px;
 	padding: 10px;
 	box-shadow: 2px 5px;
@@ -42,12 +42,12 @@ body{
 	color: #FFFFFF;
 	text-align: center;
 	transition: all 0.2s;
-	background-color: #EE9800;
+	background-color: #ee0000;
 }
 
 .error-btn:hover{
 	color: black;
-	background-color: #ffd58d;
+	background-color: #fba2a2;
 }
 
 .error-btn-secondary{
@@ -61,12 +61,12 @@ body{
 	color: #FFFFFF;
 	text-align: center;
 	transition: all 0.2s;
-	background-color: #ff206a;
+	background-color: #64dbdf;
 }
 
 .error-btn-secondary:hover{
 	color: black;
-	background-color: #ffaac7;
+	background-color: #aafff4;
 }
 
 

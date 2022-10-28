@@ -40,12 +40,12 @@ body{
 	color: #FFFFFF;
 	text-align: center;
 	transition: all 0.2s;
-	background-color: #EE9800;
+	background-color: #ee0000;
 }
 
 .home-btn:hover{
 	color: black;
-	background-color: #ffd58d;
+	background-color: #fba2a2;
 }
 
 .home-btn-secondary{
@@ -59,12 +59,12 @@ body{
 	color: #FFFFFF;
 	text-align: center;
 	transition: all 0.2s;
-	background-color: #ff206a;
+	background-color: #64dbdf;
 }
 
 .home-btn-secondary:hover{
 	color: black;
-	background-color: #ffaac7;
+	background-color: #d1fff9;
 }
 
 

@@ -2,7 +2,7 @@ nav {
 	width: 100vw;
 	display: flex;
 	justify-content: space-between;
-	background-color: #001219;
+	background-color: #000000;
 	align-items: center;
 }
 
@@ -24,34 +24,38 @@ nav span{
 
 nav span:hover{
 	color: #fff;
-	border-bottom: 2px solid #EE9800;
+	border-bottom: 2px solid #ee0000;
 	padding-bottom: 5px;
 }
 
-span #HomeLight, #MoviesLight, #TrendingLight, #PricingLight{
+span #HomeLight, #option-secondary{
 	color: #fff;
 }
 
-span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:hover{
-	border-bottom: 2px solid #ff206a;
+span #HomeLight:hover, #option-secondary:hover{
+	border-bottom: 2px solid #64dbdf;
 }
 
-#navBarColor{
+#navBar{
 	background-color: #38bdab;
 	transition: .6s;
 }
 
 .nav-options{
-	display: flex;
+	display: contents;
 	align-items:center ;
 }
 
 #heading{
-	color: #ff206a;
+	color: #ee0000;
+}
+
+#heading-secondary{
+	color: #64dbdf;
 }
 
 #navBarColor span:hover{
-	border-bottom:2px solid #ff206a ;
+	border-bottom:2px solid #64dbdf ;
 	padding-bottom: 5px;
 }
 
@@ -69,7 +73,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
 	border-radius: 20px;
 }
 
-#Color-switcher-mover{
+#switcher{
 	position: absolute;
 	left: 5px;
 	top: 4px;
@@ -80,7 +84,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
 	transition: .6s;
 }
 
-#Color-switcher-moved{
+#switcher-secondary{
 	position: absolute;
 	background-color: #fff;
 	left: 40px;
@@ -108,10 +112,6 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
 
 .input-group input::placeholder{
 	color: black;
-}
-
-.input-group input:focus{
-	outline: none;
 }
 
 #search{
