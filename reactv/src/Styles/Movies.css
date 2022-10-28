@@ -6,11 +6,19 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
+}
+
+.loading-icon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 .mainBgColor{
 	background-color: #0c1e25;
-	width: 100%;
+	width: 100%;	
 }
 
 .secondaryBgColor{

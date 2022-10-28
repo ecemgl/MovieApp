@@ -5,8 +5,10 @@ import NoImage from './noImage.png'
 import '../Styles/Movies.css'
 import {Container} from './NavBar'
 import useFilter from '../hooks/useFilter' 
+import ClipLoader from "react-spinners/ClipLoader";
 
 function Content(props){
+	const [loading, setLoading] = useState(false)
 	const {toggle,inputValue} = useContext(Container)
 	const input = inputValue
 	const [contentData,setContentData] = useState([])
@@ -16,20 +18,37 @@ function Content(props){
 	const ContentCall = async () => {
 		const data = await axios.get(Api)
 		const results = data.data.entries
-		console.log("result",results)
 		setNewArr(results)
 		setContentData(newArr)
 	}
+	
+	useEffect(() => {
+		setLoading(true)
+		setTimeout(() => {
+			setLoading(false)
+		},1000)
+	},[])
+
 	useEffect(() => {
 		ContentCall()
 	},[newArr])
-	console.log(contentData)
 
 	return(
 		<div>
 			<div className={toggle ? "mainBgColor" : "secondaryBgColor"}>
 			<div className="movies-container">
-			{contentData.map((content) => {
+			{(loading || contentData.length === 0) ? 
+			<div className="loading-icon">
+				<ClipLoader
+				color={toggle ? "#EE9800" : "#ff206a"}
+				loading={loading}
+				size={100}
+				aria-label="Loading Spinner"
+				data-testid="loader"
+				/> 
+			</div>
+			: 
+			contentData.map((content) => {
 				return(
 				<div>
 					<div id="container">
