@@ -6,6 +6,9 @@ import '../Styles/Movies.css'
 import {Container} from './NavBar'
 import useFilter from '../hooks/useFilter' 
 import ClipLoader from "react-spinners/ClipLoader";
+import Error from './Error'
+import {useNavigate} from 'react-router-dom';
+
 
 function Content(props){
 	const [loading, setLoading] = useState(false)
@@ -13,15 +16,22 @@ function Content(props){
 	const input = inputValue
 	const [contentData,setContentData] = useState([])
 	const [newArr,setNewArr] = useFilter([], props.name)
+	const navigate = useNavigate()
 
-	const Api = "https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json"
+	const Api = "https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/samjfgkple.json"
 	const ContentCall = async () => {
-		const data = await axios.get(Api)
+		await axios.get(Api).then(function (data) {
+			
 		const results = data.data.entries
 		setNewArr(results)
 		setContentData(newArr)
+		})
+		.catch(function (error) {
+			navigate('/error')
+		});
+		
 	}
-	
+
 	useEffect(() => {
 		setLoading(true)
 		setTimeout(() => {
@@ -60,6 +70,7 @@ function Content(props){
 				</div>
 				)
 			})}
+			
 			</div>
 			</div>
 		</div>

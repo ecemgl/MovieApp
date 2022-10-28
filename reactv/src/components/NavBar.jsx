@@ -6,6 +6,7 @@ import Movies from './Movies'
 import Series from './Series'
 import Trends from './Trends'
 import Pricing from './Pricing'
+import Error from './Error'
 
 export const Container = React.createContext()
 
@@ -18,7 +19,7 @@ function NavBar(){
 			<nav className={toggle ? "" : "navBarColor"}>
 				<div className="nav-options">
 						<h1 id={toggle ? "" : "heading"}>ReacTV</h1>
-						<NavLink to="" style={({isActive}) => {return {color: isActive ? '#fff' : '#EE9800'}}}>
+					<NavLink to="/movies" style={({isActive}) => {return {color: isActive ? '#fff' : '#EE9800'}}}>
 						<span id={toggle ? "Movies" : "MoviesLight"}>Movies</span>
 					</NavLink>
 					<NavLink to="/series" style={({isActive}) => {return {color: isActive ? '#fff' : '#EE9800'}}}>
@@ -40,10 +41,12 @@ function NavBar(){
 				</div>
 			</nav>
 			<Routes>
-				<Route path='' element={<Movies/>} />
+				<Route path='movies' element={<Movies/>} />
 				<Route path='series' element={<Series/>} />
 				<Route path='trending' element={<Trends/>} />
 				<Route path='pricing' element={<Pricing/>} />
+				<Route path='error' element={<Error/>} />
+				<Route path='*' element={<Error/>} />
 			</Routes>
 		</div>
 		</Container.Provider>
