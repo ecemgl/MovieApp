@@ -1,10 +1,10 @@
 import React from 'react'
-import Parent from './Parent';
+import Content from './Content';
 
 function Movies(){
 	return(
 		<div>
-			<Parent name="movie" />
+			<Content name="movie" />
 		</div>
 	)
 }

@@ -1,10 +1,10 @@
 import React from 'react'
-import Parent from './Parent';
+import Content from './Content';
 
 function Series(){
 	return(
 		<div>
-			<Parent name="series" />
+			<Content name="series" />
 		</div>
 	)
 }

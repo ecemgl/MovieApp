@@ -6,38 +6,37 @@ import '../Styles/Movies.css'
 import {Container} from './NavBar'
 import useFilter from '../hooks/useFilter' 
 
-function Parent(props){
-	console.log("NEYMİS BU PROP",props.name)
+function Content(props){
 	const {toggle,inputValue} = useContext(Container)
 	const input = inputValue
-	const [moviesData,setMoviesData] = useState([])
+	const [contentData,setContentData] = useState([])
 	const [newArr,setNewArr] = useFilter([], props.name)
 
 	const Api = "https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json"
-	const MovieCall = async () => {
+	const ContentCall = async () => {
 		const data = await axios.get(Api)
 		const results = data.data.entries
 		console.log("result",results)
 		setNewArr(results)
-		setMoviesData(newArr)
+		setContentData(newArr)
 	}
 	useEffect(() => {
-		MovieCall()
-		console.log("Tekrar render edilip çalıştırılınca mı patlıyor")
+		ContentCall()
 	},[newArr])
-	console.log(moviesData)
+	console.log(contentData)
 
 	return(
 		<div>
 			<div className={toggle ? "mainBgColor" : "secondaryBgColor"}>
 			<div className="movies-container">
-			{moviesData.map((movie) => {
+			{contentData.map((content) => {
 				return(
 				<div>
 					<div id="container">
 						<AiFillPlayCircle color="white" fontSize={40} id="playIcon" />
-						<img src={movie.images["Poster Art"].url ? movie.images["Poster Art"].url : NoImage} />
-						<h3 className={toggle ? "DarkTheme" : "LightThemeClose"}>{movie.title}</h3>
+						<img src={content.images["Poster Art"].url ? content.images["Poster Art"].url : NoImage} />
+						<h3 className={toggle ? "DarkTheme" : "LightThemeClose"}>{content.title}</h3>
+
 					</div>
 				</div>
 				)
@@ -48,4 +47,4 @@ function Parent(props){
 	)
 }
 
-export default Parent;
+export default Content;
